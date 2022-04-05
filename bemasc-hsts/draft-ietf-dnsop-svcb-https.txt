@@ -5,9 +5,9 @@
 DNSOP Working Group                                          B. Schwartz
 Internet-Draft                                                    Google
 Intended status: Standards Track                               M. Bishop
-Expires: 3 September 2022                                      E. Nygren
+Expires: 7 October 2022                                        E. Nygren
                                                      Akamai Technologies
-                                                            2 March 2022
+                                                            5 April 2022
 
 
  Service binding and parameter specification via the DNS (DNS SVCB and
@@ -49,7 +49,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 September 2022.
+   This Internet-Draft will expire on 7 October 2022.
 
 Copyright Notice
 
@@ -233,8 +233,8 @@ Table of Contents
       above) for HTTP, where SRV [SRV] has not been widely adopted
 
    *  Provide an HSTS-like indication [HSTS] signaling that the "https"
-      scheme should be used instead of "http" for all requests to this
-      origin (see Section 9.5).
+      scheme should be used instead of "http" for all HTTP requests to
+      this host and port (see Section 9.5).
 
 1.2.  Overview of the SVCB RR
 
@@ -1181,10 +1181,10 @@ Table of Contents
    restriction to the "port" SvcParam.
 
    The presence of an HTTPS RR for an origin also indicates that clients
-   should always connect securely and use the "https" scheme, as
-   discussed in Section 9.5.  This allows HTTPS RRs to apply to pre-
-   existing "http" scheme URLs, while ensuring that the client uses a
-   secure and authenticated connection.
+   should connect securely and use the "https" scheme, as discussed in
+   Section 9.5.  This allows HTTPS RRs to apply to pre-existing "http"
+   scheme URLs, while ensuring that the client uses a secure and
+   authenticated connection.
 
    The HTTPS RR parallels the concepts introduced in the HTTP
    Alternative Services proposed standard [AltSvc].  Clients and servers
@@ -1363,9 +1363,10 @@ Table of Contents
    redirect behavior.)  Because HTTPS RRs are received over an often
    insecure channel (DNS), clients MUST NOT place any more trust in this
    signal than if they had received a 307 redirect over cleartext HTTP.
-   If this redirection would result in a loss of functionality (e.g.
-   important resources or behaviors that are only available when using
-   the "http" origin), the operator MUST NOT publish an HTTPS RR.
+   Where the HTTP resource does not redirect to the HTTPS resource or
+   reference the same underlying resource, as is commonplace, requests
+   directed to the HTTP resource will be processed by the HTTPS resource
+   with potentially unexpected results.
 
    When an "https" connection fails due to an error in the underlying
    secure transport, such as an error in certificate validation, some
