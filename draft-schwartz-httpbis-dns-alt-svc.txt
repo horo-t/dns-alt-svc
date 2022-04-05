@@ -5,8 +5,8 @@
 HTTP Working Group                                           B. Schwartz
 Internet-Draft                                                    Google
 Intended status: Standards Track                               M. Bishop
-Expires: 15 April 2022                               Akamai Technologies
-                                                         12 October 2021
+Expires: 7 October 2022                              Akamai Technologies
+                                                            5 April 2022
 
 
      Finding HTTP Alternative Services via the Domain Name Service
@@ -38,11 +38,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 15 April 2022.
+   This Internet-Draft will expire on 7 October 2022.
 
 Copyright Notice
 
-   Copyright (c) 2021 IETF Trust and the persons identified as the
+   Copyright (c) 2022 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -50,9 +50,9 @@ Copyright Notice
    license-info) in effect on the date of publication of this document.
    Please review these documents carefully, as they describe your rights
    and restrictions with respect to this document.  Code Components
-   extracted from this document must include Simplified BSD License text
-   as described in Section 4.e of the Trust Legal Provisions and are
-   provided without warranty as described in the Simplified BSD License.
+   extracted from this document must include Revised BSD License text as
+   described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Revised BSD License.
 
 Table of Contents
 
@@ -387,8 +387,7 @@ Table of Contents
 
    [AltSvc]   Nottingham, M., McManus, P., and J. Reschke, "HTTP
               Alternative Services", RFC 7838, DOI 10.17487/RFC7838,
-              April 2016,
-              <https://datatracker.ietf.org/doc/html/rfc7838>.
+              April 2016, <https://www.rfc-editor.org/rfc/rfc7838>.
 
    [AltSvcSNI]
               Bishop, M., "The "SNI" Alt-Svc Parameter", Work in
@@ -419,74 +418,71 @@ Table of Contents
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
               DOI 10.17487/RFC2119, March 1997,
-              <https://datatracker.ietf.org/doc/html/rfc2119>.
+              <https://www.rfc-editor.org/rfc/rfc2119>.
 
    [RFC2181]  Elz, R. and R. Bush, "Clarifications to the DNS
               Specification", RFC 2181, DOI 10.17487/RFC2181, July 1997,
-              <https://datatracker.ietf.org/doc/html/rfc2181>.
+              <https://www.rfc-editor.org/rfc/rfc2181>.
 
    [RFC3597]  Gustafsson, A., "Handling of Unknown DNS Resource Record
               (RR) Types", RFC 3597, DOI 10.17487/RFC3597, September
-              2003, <https://datatracker.ietf.org/doc/html/rfc3597>.
+              2003, <https://www.rfc-editor.org/rfc/rfc3597>.
 
    [RFC6066]  Eastlake 3rd, D., "Transport Layer Security (TLS)
               Extensions: Extension Definitions", RFC 6066,
               DOI 10.17487/RFC6066, January 2011,
-              <https://datatracker.ietf.org/doc/html/rfc6066>.
+              <https://www.rfc-editor.org/rfc/rfc6066>.
 
    [RFC6454]  Barth, A., "The Web Origin Concept", RFC 6454,
               DOI 10.17487/RFC6454, December 2011,
-              <https://datatracker.ietf.org/doc/html/rfc6454>.
+              <https://www.rfc-editor.org/rfc/rfc6454>.
 
    [RFC7595]  Thaler, D., Ed., Hansen, T., and T. Hardie, "Guidelines
               and Registration Procedures for URI Schemes", BCP 35,
               RFC 7595, DOI 10.17487/RFC7595, June 2015,
-              <https://datatracker.ietf.org/doc/html/rfc7595>.
+              <https://www.rfc-editor.org/rfc/rfc7595>.
 
    [RFC7858]  Hu, Z., Zhu, L., Heidemann, J., Mankin, A., Wessels, D.,
               and P. Hoffman, "Specification for DNS over Transport
               Layer Security (TLS)", RFC 7858, DOI 10.17487/RFC7858, May
-              2016, <https://datatracker.ietf.org/doc/html/rfc7858>.
+              2016, <https://www.rfc-editor.org/rfc/rfc7858>.
 
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
-              May 2017, <https://datatracker.ietf.org/doc/html/rfc8174>.
+              May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
 7.2.  Informative References
 
    [HTTP]     Fielding, R., Ed. and J. Reschke, Ed., "Hypertext Transfer
               Protocol (HTTP/1.1): Message Syntax and Routing",
               RFC 7230, DOI 10.17487/RFC7230, June 2014,
-              <https://datatracker.ietf.org/doc/html/rfc7230>.
+              <https://www.rfc-editor.org/rfc/rfc7230>.
 
    [RFC5507]  IAB, Faltstrom, P., Ed., Austein, R., Ed., and P. Koch,
               Ed., "Design Choices When Expanding the DNS", RFC 5507,
               DOI 10.17487/RFC5507, April 2009,
-              <https://datatracker.ietf.org/doc/html/rfc5507>.
+              <https://www.rfc-editor.org/rfc/rfc5507>.
 
    [RFC6895]  Eastlake 3rd, D., "Domain Name System (DNS) IANA
               Considerations", BCP 42, RFC 6895, DOI 10.17487/RFC6895,
-              April 2013,
-              <https://datatracker.ietf.org/doc/html/rfc6895>.
+              April 2013, <https://www.rfc-editor.org/rfc/rfc6895>.
 
    [RFC7871]  Contavalli, C., van der Gaast, W., Lawrence, D., and W.
               Kumari, "Client Subnet in DNS Queries", RFC 7871,
               DOI 10.17487/RFC7871, May 2016,
-              <https://datatracker.ietf.org/doc/html/rfc7871>.
+              <https://www.rfc-editor.org/rfc/rfc7871>.
 
    [RFC8164]  Nottingham, M. and M. Thomson, "Opportunistic Security for
               HTTP/2", RFC 8164, DOI 10.17487/RFC8164, May 2017,
-              <https://datatracker.ietf.org/doc/html/rfc8164>.
+              <https://www.rfc-editor.org/rfc/rfc8164>.
 
 Authors' Addresses
 
    Ben Schwartz
    Google
-
    Email: bemasc@google.com
 
 
    Mike Bishop
    Akamai Technologies
-
    Email: mbishop@evequefou.be
