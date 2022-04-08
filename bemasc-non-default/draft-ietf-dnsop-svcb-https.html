@@ -1451,7 +1451,7 @@ available there.  The authors (gratefully) accept pull requests.<a href="#sectio
       </h2>
 <p id="section-1-1">The SVCB ("Service Binding") and HTTPS RRs provide clients with complete instructions
 for access to a service.  This information enables improved
-performance and privacy by avoiding transient connections to a sub-optimal
+performance and privacy by avoiding transient connections to a suboptimal
 default server, negotiating a preferred protocol, and providing relevant
 public keys.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">For example, HTTP clients currently resolve only A and/or AAAA records for
@@ -1876,7 +1876,7 @@ protocol mapping, clients MUST ignore any SvcParam that they do
 not recognize.<a href="#section-2.4.3-2" class="pilcrow">¶</a></p>
 <p id="section-2.4.3-3">Some SvcParams impose requirements on other SvcParams in the RR.  A
 ServiceMode RR is called "self-consistent" if its SvcParams all comply with
-each others' requirements.  Zone-file implementations SHOULD enforce
+each other's requirements.  Zone-file implementations SHOULD enforce
 self-consistency.  Clients MUST reject any RR whose recognized SvcParams
 are not self-consistent, and MAY reject the entire RRSet.<a href="#section-2.4.3-3" class="pilcrow">¶</a></p>
 </section>
@@ -2076,7 +2076,7 @@ section.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
         <h3 id="name-recursive-resolvers">
 <a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-recursive-resolvers" class="section-name selfRef">Recursive resolvers</a>
         </h3>
-<p id="section-4.2-1">Whether or not the recursive resolver is aware of SVCB, the normal response
+<p id="section-4.2-1">Whether the recursive resolver is aware of SVCB or not, the normal response
 construction process (i.e. unknown RR type resolution under <span>[<a href="#RFC3597" class="xref">RFC3597</a>]</span>)
 generates the Answer section of the response.
 Recursive resolvers that are aware of SVCB SHOULD help the client to
@@ -2682,7 +2682,7 @@ allowed:<a href="#section-9.3-5" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-9.3-6.2">HTTP/3 to <code>alt3.example:9443</code><a href="#section-9.3-6.2" class="pilcrow">¶</a>
 </li>
-          <li class="normal" id="section-9.3-6.3">Fallback to the the client's non-Alt-Svc connection behavior<a href="#section-9.3-6.3" class="pilcrow">¶</a>
+          <li class="normal" id="section-9.3-6.3">Fallback to the client's non-Alt-Svc connection behavior<a href="#section-9.3-6.3" class="pilcrow">¶</a>
 </li>
         </ul>
 <p id="section-9.3-7">ECH-capable clients would use ECH when establishing any of these connections.<a href="#section-9.3-7" class="pilcrow">¶</a></p>
