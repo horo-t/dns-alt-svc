@@ -1792,7 +1792,7 @@ Table of Contents
    or "-" (Section 2.1).  The name MUST NOT start with "key" or
    "invalid".
 
-   Entries in this registry are subject to a First Come First Served
+   New entries in this registry are subject to a First Come First Served
    registration policy ([RFC8126], Section 4.4).  The Format Reference
    MUST specify how to validate and convert the SvcParamValue's
    presentation format to wire format and MAY detail its intended
