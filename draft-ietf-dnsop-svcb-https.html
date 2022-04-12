@@ -1811,12 +1811,15 @@ TargetName.  SVCB RRSets SHOULD only have a single resource
 record in AliasMode.  If multiple are present, clients or recursive
 resolvers SHOULD pick one at random.<a href="#section-2.4.2-1" class="pilcrow">¶</a></p>
 <p id="section-2.4.2-2">The primary purpose of AliasMode is to allow aliasing at the zone
-apex, where CNAME is not allowed.  In AliasMode, the TargetName will
+apex, where CNAME is not allowed (see e.g. <span>[<a href="#RFC1912" class="xref">RFC1912</a>], <a href="https://rfc-editor.org/rfc/rfc1912#section-2.4" class="relref">Section 2.4</a></span>).
+In AliasMode, the TargetName will
 be the name of a domain that resolves to SVCB,
 AAAA, and/or A records.  (See <a href="#svcb-compatible" class="xref">Section 6</a> for aliasing of SVCB-compatible RR types.)
- The TargetName SHOULD NOT be equal
-to the owner name, as this would result in a loop.<a href="#section-2.4.2-2" class="pilcrow">¶</a></p>
-<p id="section-2.4.2-3">In AliasMode, records SHOULD NOT include any SvcParams, and recipients MUST
+Unlike CNAME, AliasMode records do not affect the resolution of other RR
+types, and apply only to a specific service, not an entire domain name.<a href="#section-2.4.2-2" class="pilcrow">¶</a></p>
+<p id="section-2.4.2-3">The AliasMode TargetName SHOULD NOT be equal
+to the owner name, as this would result in a loop.
+In AliasMode, records SHOULD NOT include any SvcParams, and recipients MUST
 ignore any SvcParams that are present.<a href="#section-2.4.2-3" class="pilcrow">¶</a></p>
 <p id="section-2.4.2-4">For example, the operator of foo://example.com:8080 could
 point requests to a service operating at foosvc.example.net
@@ -3566,6 +3569,10 @@ and suggestions on this draft.<a href="#section-16-2" class="pilcrow">¶</a></p>
 <dt id="I-D.ietf-dnsop-aname">[I-D.ietf-dnsop-aname]</dt>
         <dd>
 <span class="refAuthor">Finch, T.</span>, <span class="refAuthor">Hunt, E.</span>, <span class="refAuthor">Dijk, P. V.</span>, <span class="refAuthor">Eden, A.</span>, and <span class="refAuthor">M. Mekking</span>, <span class="refTitle">"Address-specific DNS aliases (ANAME)"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-dnsop-aname-04</span>, <time datetime="2019-07-08" class="refDate">8 July 2019</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-aname-04">https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-aname-04</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC1912">[RFC1912]</dt>
+        <dd>
+<span class="refAuthor">Barr, D.</span>, <span class="refTitle">"Common DNS Operational and Configuration Errors"</span>, <span class="seriesInfo">RFC 1912</span>, <span class="seriesInfo">DOI 10.17487/RFC1912</span>, <time datetime="1996-02" class="refDate">February 1996</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc1912">https://www.rfc-editor.org/rfc/rfc1912</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6454">[RFC6454]</dt>
         <dd>

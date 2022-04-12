@@ -501,14 +501,17 @@ Table of Contents
    one at random.
 
    The primary purpose of AliasMode is to allow aliasing at the zone
-   apex, where CNAME is not allowed.  In AliasMode, the TargetName will
-   be the name of a domain that resolves to SVCB, AAAA, and/or A
-   records.  (See Section 6 for aliasing of SVCB-compatible RR types.)
-   The TargetName SHOULD NOT be equal to the owner name, as this would
-   result in a loop.
+   apex, where CNAME is not allowed (see e.g.  [RFC1912], Section 2.4).
+   In AliasMode, the TargetName will be the name of a domain that
+   resolves to SVCB, AAAA, and/or A records.  (See Section 6 for
+   aliasing of SVCB-compatible RR types.)  Unlike CNAME, AliasMode
+   records do not affect the resolution of other RR types, and apply
+   only to a specific service, not an entire domain name.
 
-   In AliasMode, records SHOULD NOT include any SvcParams, and
-   recipients MUST ignore any SvcParams that are present.
+   The AliasMode TargetName SHOULD NOT be equal to the owner name, as
+   this would result in a loop.  In AliasMode, records SHOULD NOT
+   include any SvcParams, and recipients MUST ignore any SvcParams that
+   are present.
 
    For example, the operator of foo://example.com:8080 could point
    requests to a service operating at foosvc.example.net by publishing:
@@ -2047,6 +2050,10 @@ Table of Contents
               Progress, Internet-Draft, draft-ietf-dnsop-aname-04, 8
               July 2019, <https://datatracker.ietf.org/doc/html/draft-
               ietf-dnsop-aname-04>.
+
+   [RFC1912]  Barr, D., "Common DNS Operational and Configuration
+              Errors", RFC 1912, DOI 10.17487/RFC1912, February 1996,
+              <https://www.rfc-editor.org/rfc/rfc1912>.
 
    [RFC6454]  Barth, A., "The Web Origin Concept", RFC 6454,
               DOI 10.17487/RFC6454, December 2011,
