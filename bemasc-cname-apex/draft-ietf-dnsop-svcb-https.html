@@ -1815,8 +1815,8 @@ apex, where CNAME is not allowed (see e.g. <span>[<a href="#RFC1912" class="xref
 In AliasMode, the TargetName will
 be the name of a domain that resolves to SVCB,
 AAAA, and/or A records.  (See <a href="#svcb-compatible" class="xref">Section 6</a> for aliasing of SVCB-compatible RR types.)
-Unlike CNAME, AliasMode records do not affect the resolution of
-other RR types, and apply only to a specific service, not an entire hostname.<a href="#section-2.4.2-2" class="pilcrow">¶</a></p>
+Unlike CNAME, AliasMode records do not affect the resolution of other RR
+types, and apply only to a specific service, not an entire domain name.<a href="#section-2.4.2-2" class="pilcrow">¶</a></p>
 <p id="section-2.4.2-3">The AliasMode TargetName SHOULD NOT be equal
 to the owner name, as this would result in a loop.
 In AliasMode, records SHOULD NOT include any SvcParams, and recipients MUST

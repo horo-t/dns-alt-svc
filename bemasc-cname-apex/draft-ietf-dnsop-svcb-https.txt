@@ -506,7 +506,7 @@ Table of Contents
    resolves to SVCB, AAAA, and/or A records.  (See Section 6 for
    aliasing of SVCB-compatible RR types.)  Unlike CNAME, AliasMode
    records do not affect the resolution of other RR types, and apply
-   only to a specific service, not an entire hostname.
+   only to a specific service, not an entire domain name.
 
    The AliasMode TargetName SHOULD NOT be equal to the owner name, as
    this would result in a loop.  In AliasMode, records SHOULD NOT
